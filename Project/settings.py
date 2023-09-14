@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('secret_key')
+SECRET_KEY = os.environ.get('secret_key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('debug',cast=bool)
+DEBUG = os.environ.get('debug',cast=bool)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 
 
 DATABASES = {
-    "default": dj_database_url.parse(config("external_url")),
+    "default": dj_database_url.parse(os.environ.get("external_url")),
 }
 
 # Password validation
@@ -151,16 +151,16 @@ AUTH_USER_MODEL = 'App.CustomUser'
 # )
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('CLOUD_NAME'),
+    'CLOUD_NAME': os.environ.get('CLOUD_NAME'),
     'API_KEY': '912634288932877',
-    'API_SECRET': config('API_SECRET')
+    'API_SECRET': os.environ.get('API_SECRET')
 }
 
-EMAIL_FROM_USER = config('EMAIL_FROM_USER')
+EMAIL_FROM_USER = os.environ.get('EMAIL_FROM_USER')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-SERVER_EMAIL = config('EMAIL_HOST_USER')
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+SERVER_EMAIL = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
