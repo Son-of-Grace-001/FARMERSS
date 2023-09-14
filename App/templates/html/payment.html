@@ -1,0 +1,74 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>payment</title>
+  <link rel="stylesheet" href="{% static 'css/payment.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="left-nav">
+        <div class="logo-cont"><img src="{% static 'images/image 2.svg' %}" alt="logo"></div>
+        <div class="logo-name">
+          <h2>Farmers Aid</h2>
+        </div>
+      </div>
+
+      <div class="middle-nav" id="middle-nav">
+        <ul class="nav-options">
+          <li class="about" id="about"> <a href="{% url 'home' %}"" class="about-link" style="text-decoration: none; color: #1d4025;">birds</a></li>
+          <li class="about" id="about"> <a href="{% url 'crop' %}" class="about-link" style="text-decoration: none; color: #1d4025;">crops</a></li>
+          <li> <input class="search" type="search" placeholder="search for product"></li>
+          <li class="about" id="about"> <a href="" class="about-link" style="text-decoration: none; color: #1d4025;">community</a></li>
+          <li class="about" id="about"> <a href="{% url 'market' %}" class="about-link" style="text-decoration: none; color: #1d4025;">market</a></li>
+          <li><a href="{% url 'cart' %}" class="about-link" style="text-decoration: none; color: #1d4025;">cart</a> </li>
+          <li class="inner-logout"><a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;">logout</a> </li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;"><button class="btn">logout</button></a> 
+      </div>
+      
+      <img id="menu" src="{% static 'images/Group 7.svg' %}" alt="">
+      <img id="close" src="{% static 'images/Group 8.svg' %}" alt="">
+    </nav>
+  </header>
+
+  <main>
+    <div class="cont">
+      <div  class="left">
+
+      </div>
+      <div class="right">
+        <label for="Full Name">Full Name</label> <br>
+        <input class="name" type="text" placeholder="Stephen Olajire" required> <br>
+        <label for="Card  Number">Card Number</label> <br>
+        <input class="name" type="text" placeholder="Enter your Card Number" required> <br>
+        <div class="inner-flex">
+          <div>
+            <label for="Expiry Date">Expiry Date</label> <br>
+            <input class="cvv" type="number" placeholder="MM/YY" required>
+          </div>
+          <div>
+            <label for="CVV">CVV</label> <br>
+            <input class="cvv" type="tel" placeholder="CVV" required>
+          </div>
+        </div>
+        <hr>
+        <div class="total">
+          <h3>total:</h3>
+          <h3>N1100</h3>
+        </div>
+        <a href=""><button class="btnn">confirm payment</button></a>
+        <a href="{% url 'cart' %}"><button class="bttn">cancel payment</button></a>
+      </div>
+    </div>
+  </main>
+
+  <script src="{% static 'js/payment.js' %}"></script>
+</body>
+</html>

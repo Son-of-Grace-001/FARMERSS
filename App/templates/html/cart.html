@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="left-nav">
+        <div class="logo-cont"><img src="{% static 'images/image 2.svg' %}" alt="logo"></div>
+        <div class="logo-name">
+          <h2>Farmers Aid</h2>
+        </div>
+      </div>
+
+      <div class="middle-nav" id="middle-nav">
+        <ul class="nav-options">
+          <li class="about" id="about"> <a href="{% url 'home' %}"" class="about-link" style="text-decoration: none; color: #1d4025;">birds</a></li>
+          <li class="about" id="about"> <a href="{% url 'crop' %}" class="about-link" style="text-decoration: none; color: #1d4025;">crops</a></li>
+          <li> <input class="search" type="search" placeholder="search for product"></li>
+          <li class="about" id="about"> <a href="" class="about-link" style="text-decoration: none; color: #1d4025;">community</a></li>
+          <li class="about" id="about"> <a href="{% url 'market' %}" class="about-link" style="text-decoration: none; color: #1d4025;">market</a></li>
+          <li class="home" id="home">cart</li>
+          <li class="inner-logout"><a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;">logout</a> </li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;"><button class="btn">logout</button></a> 
+      </div>
+      
+      <img id="menu" src="{% static 'images/Group 7.svg' %}" alt="">
+      <img id="close" src="{% static 'images/Group 8.svg' %}" alt="">
+    </nav>
+  </header>
+
+  <main>
+    <h3 class="shopping">shopping cart</h3>
+
+    <div class="cont-33">
+      <table>
+        <tr>
+          <th>product details</th>
+          <th>quantity</th>
+          <th>price</th>
+          <th>total</th>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="cont">
+              <div>
+                <img class="img" src="{% static 'images/image 31.png' %}" alt="">
+              </div>
+              <div class="center">
+                <h3 class="name">maize seed</h3>
+                <div class="cont-2">
+                  <p class="size">size:</p>
+                  <p class="sizes">1kg</p>
+                </div>
+                <div class="cont-2">
+                  <p class="size">product category:</p>
+                  <p class="sizes">seed</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="quantity">
+              <button class="minus">-</button>
+              <p class="number">1</p>
+              <button class="minus">+</button>
+            </div>
+          </td>
+          <td>
+            <h3 class="amount">N1000</h3>
+          </td>
+          <td>
+            <h3 class="amount">N1000</h3>
+          </td>
+        </tr>
+      </table>
+      <div class="bttn">
+        <a href="{% url 'market' %}"><button class="goback">go back</button></a>
+        <a href="{% url 'checkout' %} "><button class="checkout">checkout</button></a>
+      </div>
+    </div>
+  </main>
+  <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>

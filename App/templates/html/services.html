@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>service</title>
+  <link rel="stylesheet" href="{% static 'css/service.css' %}">
+</head>
+<body>
+  <header>
+   <nav>
+    <div class="left-nav">
+      <div class="logo-cont"><img src="{% static '/images/image 2.svg' %}" alt="logo"></div>
+      <div class="logo-name">
+        <h2>Farmers Aid</h2>
+      </div>
+    </div>
+
+    <div class="middle-nav" id="middle-nav">
+      <ul class="nav-options">
+        <li class="home" id="home"> <a style="color: #1d4025; text-decoration: none;" href="{% url 'index' %}">Home</a> </li>
+        <li class="about" id="about"> <a href="{% url 'about' %}" class="about-link" style="text-decoration: none; color: #1d4025;">About us</a></li>
+        <li class="service" id="service"> <a class="service-link" style="text-decoration: none; color: #1d4025;">service</a></li>
+        <li class="separate"><a style="text-decoration: none; color: #1d4025;" href="{% url 'login' %}">Login</a></li>
+        <li class="separate"><a style="text-decoration: none; color: #1d4025;" href="{% url 'signup' %}">Sign Up</a></li>
+      </ul>
+    </div>
+
+    <div class="right-nav">
+      <a href="{% url 'login' %}"><button class="login" id="login">Login</button></a>
+      <a href="{% url 'signup' %}"><button class="signup" id="signup">Sign Up</button></a>
+    </div>
+    <img id="menu" src="{% static 'images/Group 7.svg' %}" alt="">
+    <img id="close" src="{% static 'images/Group 8.svg' %}" alt="">
+  </nav>
+  </header>
+
+
+  <main>
+    <div class="top-main">
+
+    </div>
+
+    <div class="p-cont">
+      <p class="content-p">
+        The Farmerrs Aid Project offers a variety of services to farmers and other agricultural professionals, including: <br>
+        <b>Crop and bird identification:</b> We provide information on the identification of crops and birds, including their 
+        scientific names, common names, and physical characteristics. <br>
+        <b>Growing conditions:</b> We provide information on the growing conditions for crops and birds, including their preferred
+        climate, soil type, and water requirements. <br>
+        <b>Pests and diseases: </b>We provide information on the pests and diseases that can affect crops and birds, and 
+        how to control them. <br>
+        <b>Harvesting and storage:</b> We provide information on the harvesting and storage of crops and birds, 
+        including the best practices for preserving their quality. <br>
+        <b>Uses: </b>We provide information on the uses of crops and birds, including their culinary, medicinal, and ornamental value. <br>
+        <b>Interactions between crops and birds: </b>We provide information on the interactions between crops and birds, such as 
+        how birds can help to pollinate crops, control pests, and damage crops. <br> <br>
+        We also offer a number of other services, such as: <br>
+
+        <b>Search function:</b> You can search for information on crops and birds by name, scientific name, common name, or keyword. <br>
+        <b>Glossary of terms:</b> We provide a glossary of terms that are used in the field of agriculture. <br>
+        <b>Links to other resources: </b>We provide links to other resources, such as government websites, agricultural organizations,
+        and scientific journals. <br> <br>
+        Contact us <br>
+
+        If you have any questions about our services, please contact us We would be happy to help you. <br>
+
+        We hope that you find our services helpful. Thank you for visiting the Crops and Birds Information Project!
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-div">
+      <div>
+        <div class="footer-logo">
+          <img src="{% static '/images/image 2.svg' %}" alt="logo">
+          <h2 class="site-name">farmers aid</h2>
+        </div>
+        <div class="social-media">
+          <img src="{% static '/images/icon-facebook.svg' %}" alt="logo">
+          <img src="{% static '/images/icon-twitter.svg' %}" alt="logo">
+          <img src="{% static '/images/icon-youtube.png' %}" alt="logo">
+          <img src="{% static '/images/Frame.svg' %}" alt="logo">
+          <img src="{% static '/images/icon-instagram 1.svg' %}" alt="logo">
+        </div>
+      </div>
+      <div>
+        <p class="email-p">horlharmighty2000@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/landing.js' %}"></script>
+</body>
+</html>

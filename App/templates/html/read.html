@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn more</title>
+  <link rel="stylesheet" href="{% static 'css/read.css' %}">
+</head>
+<body>
+  <main>
+    <div class="image-cont">
+      <img src="{{variety.image.url}}" alt="">
+    </div>
+
+    <div class="div">
+      <h2 class="name-h">{{variety.name}}</h2>
+    </div>
+
+    <h2  class="name-h">features</h2>
+    <div class="div">
+      <p class="description">{{variety.description}}</p>
+    </div>
+
+    <h2 class="name-h">weather</h2>
+    <div class="div">
+      <p class="description"> {{variety.weather}}</p>
+    </div>
+
+    <h2 class="name-h">yield</h2>
+    <div class="div">
+      <p class="description"> {{variety.yields}}</p>
+    </div>
+    
+    <h2>Diseases:</h2>
+    <div>
+        {% for disease in diseases %}
+            <h4>{{ disease.name }}</h4>
+            <p class="description">{{ disease.pest_description }}</p>
+        {% endfor %}
+    </div>
+
+    <h2 class="name-h">Symptoms:</h2>
+    <div>
+      {% for symptom in symptoms %}
+      <div>
+        <h4>{{symptom.disease_name}}</h4>
+        <ul>
+          <li>{{ symptom.disease_sym }}</li>
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h2 class="name-h">Controls:</h2>
+    <ul>
+        {% for control in controls %}
+            <li>{{ control.disease.name }}: {{ control.disease_con }}</li>
+        {% endfor %}
+    </ul>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="left-nav">
+        <div class="logo-cont"><img src="{% static 'images/image 2.svg' %}" alt="logo"></div>
+        <div class="logo-name">
+          <h2>Farmers Aid</h2>
+        </div>
+      </div>
+
+      <div class="middle-nav" id="middle-nav">
+        <ul class="nav-options">
+          <li class="about" id="about"> <a href="{% url 'home' %}"" class="about-link" style="text-decoration: none; color: #1d4025;">birds</a></li>
+          <li class="about" id="about"> <a href="{% url 'crop' %}" class="about-link" style="text-decoration: none; color: #1d4025;">crops</a></li>
+          <li> <input class="search" type="search" placeholder="search for product"></li>
+          <li class="about" id="about"> <a href="" class="about-link" style="text-decoration: none; color: #1d4025;">community</a></li>
+          <li class="about" id="about"> <a href="{% url 'market' %}" class="about-link" style="text-decoration: none; color: #1d4025;">market</a></li>
+          <li><a href="{% url 'cart' %}" class="about-link" style="text-decoration: none; color: #1d4025;">cart</a> </li>
+          <li class="inner-logout"><a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;">logout</a> </li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;"><button class="btn">logout</button></a> 
+      </div>
+      
+      <img id="menu" src="{% static 'images/Group 7.svg' %}" alt="">
+      <img id="close" src="{% static 'images/Group 8.svg' %}" alt="">
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="right">
+        <div class="btn-cont">
+          <a href="{% url 'cart' %}"><button class="btn-back">Back to Cart</button></a>
+        </div>
+        <div class="summary-cont">
+          <h2 class="summary">order summary</h2>
+        </div>
+        <div class="inner-flex">
+          <div class="image-cont">
+            <img class="img" src="{% static 'images/image 31.png' %}" alt="">
+          </div>
+          <div>
+            <p class="item-name">maize seed</p>
+          </div>
+          <div>
+            <p class="amount">N1000</p>
+          </div>
+          <div>
+            <p class="size">1kg</p>
+          </div>
+        </div>
+        <div class="item-cont">
+          <div class="item">
+            <p class="number">Items:</p>
+            <p class="fig">1</p>
+          </div>
+          <div class="item-contt">
+            <p class="shipping">shipping fee:</p>
+            <p>N100</p>
+          </div>
+          <div class="item-1">
+            <p class="total">total:</p>
+            <p class="tot">N1100</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="left">
+        <form action="" method="get">
+          <input type="text" placeholder="Name" > <br>
+          <input type="email" placeholder="Email" > <br>
+          <input type="tel" placeholder="Phone Number" > <br>
+          <h2  class="info">Shopping Information</h2>
+          <input type="text" placeholder="State"> <br>  
+          <input type="text" placeholder="city" > <br>
+          <input type="number" placeholder="Zip Code"> <br>
+          <textarea placeholder="Address"  id="" cols="30" rows=5"></textarea> <br>
+          <a href="{% url 'payment' %}"><button class="continue">continue</button></a>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="{% static 'js/checkout.js' %}"></script>
+</body>
+</html>

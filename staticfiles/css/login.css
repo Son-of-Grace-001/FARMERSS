@@ -1,0 +1,167 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*stylin the left-div*/
+.login{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding:50px 100px 50px 100px;
+}
+.left-div{
+  background-image: url("../images/image 11.png");
+  background-size: cover;
+  background-position: cover;
+  border: 1px solid #767A77;
+}
+
+input:focus{ 
+  border: 1px solid red
+}
+
+/*styling the right div*/
+.right-div{
+  padding: 50px;
+  border: 1px solid #767A77;
+}
+.logo{
+  display:flex;
+  align-items: center;
+}
+.logo >img{
+  height: 32px;
+  width: 32px;
+}
+.logo-name{
+  color: #1D4025;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+.welcome{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color:#1D4025;
+}
+.login-p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #767A77;
+  font-size: 18px;
+}
+.username,
+.password{
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #767A77;
+  color: #767A77;
+  padding-left: 10px;
+}
+.username{
+  margin-bottom: 10px;
+}
+.error{
+  margin-bottom: 20px;
+  margin-top: 8px;
+  color: red;
+  text-align: right;
+  display: none;
+}
+.h33{
+  margin-bottom: 20px;
+  margin-top: 8px;
+  color: red;
+  text-align: center
+  ;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.check{
+  display: flex;
+}
+.check-btn{
+  border: 1px solid #1D4025;
+}
+.check-btn:checked{
+  background-color: #1D4025;
+}
+.remember,.reset-p{
+  margin-left: 8px;
+  color: #1D4025;
+  font-size: 18px;
+}
+form >label{
+  color: #767A77;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.btn{
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+  border: 1px solid #767A77;
+  text-align: center;
+  border-radius: 10px;
+  background-color:#1D4025;
+}
+.btn:hover{
+  cursor: pointer;
+}
+.donot{
+  font-size: 18px;
+  color: #767A77;
+  margin-top: 20px;
+}
+.here{
+  color: #1D4025;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media only screen and (min-width:769px){
+  .login{
+    padding: 60px;
+  }
+  .right-div{
+    padding: 40px;
+  }
+}
+
+@media only screen and (min-width:601px) and (max-width:768px){
+  .login{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  .left-div{
+    height: 500px;
+    background-image: url(../images/barnevelder-chicken-in-backyard.webp);
+  }
+  .right-div{
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .login{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .left-div{
+    height: 250px;
+    background-image: url(../images/barnevelder-chicken-in-backyard.webp);
+  }
+  .right-div{
+    padding: 20px;
+  }
+  .check-btn{
+    margin-top:8px;
+  }
+}

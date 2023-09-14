@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn more</title>
+  <link rel="stylesheet" href="{% static 'css/readproduct.css' %}">
+</head>
+<body>
+  <main>
+   <div>
+    <div class="image-cont">
+      <img src="{{variety.image.url}}" alt="">
+    </div>
+   </div>
+
+    <div>
+      <div class="div">
+        <h2 class="name-h">{{variety.name}}</h2>
+      </div>
+  
+      <h2  class="name-h">size</h2>
+      <div class="div">
+        <p class="description">{{variety.small_description}}</p>
+      </div>
+  
+      <h2 class="name-h">description</h2>
+      <div class="div">
+        <p class="description"> {{variety.description}}</p>
+      </div>
+  
+      
+      <div class="div">
+        <p class="description"> {{variety.price}}</p>
+      </div>
+      
+      <div class="container">
+        <button>add to cart</button>
+        <a href="{% url 'market' %}"><button class="view">cancel</button></a>
+      </div
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,283 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome home</title>
+  <link rel="stylesheet" href="{% static '/css/styling.css' %}">
+</head>
+<body>
+  <header>
+   <nav>
+    <div class="left-nav">
+      <div class="logo-cont"><img src="{% static '/images/image 2.svg' %}" alt="logo"></div>
+      <div class="logo-name">
+        <h2>Farmers Aid</h2>
+      </div>
+    </div>
+
+    <div class="middle-nav" id="middle-nav">
+      <ul class="nav-options">
+        <li class="home" id="home">Home</li>
+        <li class="about" id="about"> <a href="#aboutus" class="about-link" style="text-decoration: none; color: #1d4025;">About us</a></li>
+        <li class="service" id="service"> <a href="#our-service" class="service-link" style="text-decoration: none; color: #1d4025;">service</a></li>
+        <li class="separate"><a href="{% url 'login' %}">Login</a></li>
+        <li class="separate"><a href="{% url 'signup' %}">Sign Up</a></li>
+      </ul>
+    </div>
+
+    <div class="right-nav">
+      <a href="{% url 'login' %}"><button class="login" id="login">Login</button></a>
+      <a href="{% url 'signup' %}"><button class="signup" id="signup">Sign Up</button></a>
+    </div>
+    <img id="menu" src="{% static 'images/Group 7.svg' %}" alt="">
+    <img id="close" src="{% static 'images/Group 8.svg' %}" alt="">
+   </nav>
+  </header>
+
+
+  <main>
+    <div class="top-main">
+
+    </div>
+    <div class="why">
+      <h1 class="why-header">
+        WHY CHOOSE FARMERS AID ?
+      </h1>
+      <p class="why-content">
+        Famers Aid is a platform, that provides information about crops and animals, such as when 
+        a crop  can be planted, the suitable soil and weather condition, the pests and diseases that 
+        affect the crop, the pests and diseases control, the suitable fertilizers and the types of that 
+        particular crops and which type is best suitable for each region and also gives adequate
+        information about poultry birds. 
+      </p>
+    </div>
+
+    <div class="did">
+      <h1 class="did-header">
+        DID YOU KNOW?
+      </h1>
+      <div class="inner-did-grid">
+       <a href=" {% url 'login' %}">
+        <div>
+          <div class="img-cont">
+            <img src="{% static '/images/image 3.png' %}" alt="">
+          </div>
+          <h3 class="cont-h">
+            Plymouth Rock
+          </h3>
+          <p class="cont-p">
+            They are large, dual purpose
+            birds that are known for
+            their good egg laying ability..
+          </p>
+        </div>
+       </a>
+
+        <a href="{% url 'login' %}">
+
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/Frame 8.png' %}" alt="">
+            </div>
+            <h3 class="cont-h">
+              Brahma
+            </h3>
+            <p class="cont-p">
+              They are calm, docile and
+              they need to be kept in a 
+              cool place....
+            </p>
+          </div>
+        </a>
+
+        <a href="{% url 'login' %}">
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/image 6.png' %}" alt="">
+            </div>
+            <h3 class="cont-h">
+              Barnevelder
+            </h3>
+            <p class="cont-p">
+              They have an iridescent 
+              green tinge in their body
+              and good for small flock.
+            </p>
+          </div>
+        </a>
+
+        <a href="{% url 'login' %}">
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/isa-brown.webp' %}" alt="">
+            </div>
+            <h3 class="cont-h">
+              Isa-brown
+            </h3>
+            <p class="cont-p">
+              They have an iridescent 
+              green tinge in their body
+              and good for small flock.
+            </p>
+          </div>
+        </a>
+        <a href="{% url 'login' %}">
+
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/image 7.png' %}" alt="">
+            </div>
+            <h3 class="cont-h">
+              Sweet Corn
+            </h3>
+            <p class="cont-p">
+              This maize is characterized 
+              by its sweet, tender kernels. 
+              It is often eaten fresh....
+            </p>
+          </div>
+        </a>
+
+        <a href="{% url 'login' %}">
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/imagep.png' %}" alt="">
+            </div>
+            <h3 class="cont-h">
+              Wazy Corn
+            </h3>
+            <p class="cont-p">
+              This  has a high content of 
+              waxy starch. It is often use
+              for making adhesives....
+            </p>
+          </div>
+        </a>
+
+        <a href="{% url 'login' %}">
+
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/image 8.png' %}" alt="">
+            </div>
+            <h3 class="cont-h">
+              Flint Corn
+            </h3>
+            <p class="cont-p">
+              This has a hard, white or
+              yellow endosperm that is
+              not indented....
+            </p>
+          </div>
+        </a>
+
+        <a href="{% url 'login' %}">
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/image 9.png' %}" alt="">
+            </div>
+            <h3 class="cont-h">
+              Stipped Corn
+            </h3>
+            <p class="cont-p">
+              They are large, dual purpose
+              birds that are known for
+              their good egg laying ability..
+            </p>
+          </div>
+
+        </a>
+      </div>
+      <div>
+        <h1 class="why-header-2">
+          GET AGRICULTURAL PRODUCTS AT EASE
+        </h1>
+        <div class="inner-did-grid">
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/fertilizer.jpeg' %}" alt="">
+            </div>
+            <h3 class="maize">Fertilizer</h3>
+            <p  class="size">25kg of NPK</p>
+            <p class="price">N30000</p>
+            <a href="{% url 'login' %}"><button class="add">Add to Cart</button></a>
+          </div>
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/feed.jpeg' %}" alt="">
+            </div>
+            <h3 class="maize">Starter</h3>
+            <p  class="size">25kg of Starter</p>
+            <p class="price">N17000</p>
+            <a href="{% url 'login' %}"><button class="add">Add to Cart</button></a>
+          </div>
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/pesticide.jpeg' %}" alt="">
+            </div>
+            <h3 class="maize">pesticide</h3>
+            <p  class="size">1kg of pesticide</p>
+            <p class="price">N1000</p>
+            <a href="{% url 'login' %}"><button class="add">Add to Cart</button></a>
+          </div>
+          <div>
+            <div class="img-cont">
+              <img src="{% static '/images/herbicide.jpeg' %}" alt="">
+            </div>
+            <h3 class="maize">Herbicide</h3>
+            <p  class="size">1kg of herbicide</p>
+            <p class="price">N4000</p>
+            <a href="{% url 'login' %}"><button class="add">Add to Cart</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-div" id="aboutus">
+      <h1 class="aboutus-h">About us</h1>
+      <p class="aboutus-p">
+        Farmers Aid is a project that was created to provide farmers with the resources they need 
+        to succeed. We believe that farmers are the backbone of our food system, and we want to do everything we can to help them thrive.
+        Ourwebsite provides farmers with a wealth of information about crops and poultry birds.
+      </p>
+      <a class="readmore-btn" href=" {% url 'about' %}"><button class="read-more">Read More</button></a>
+    </div>
+
+    <div class="service-div" id="our-service">
+      <h1 class="service-h">service</h1>
+      <p class="service-p">
+        Farmers Aid is a project that was created to provide farmers with the resources they need 
+        to succeed. We believe that farmers are the backbone of our food system, and we want to do everything we can to help them thrive.
+        Ourwebsite provides farmers with a wealth of information about crops and poultry birds.
+      </p>
+      <a class="service-btn" href="{% url 'service' %}"><button class="read-more">Read More</button></a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-div">
+      <div>
+        <div class="footer-logo">
+          <img src="{% static '/images/image 2.svg' %}" alt="logo">
+          <h2 class="site-name">farmers aid</h2>
+        </div>
+        <div class="social-media">
+          <img src="{% static '/images/icon-facebook.svg' %}" alt="logo">
+          <img src="{% static '/images/icon-twitter.svg' %}" alt="logo">
+          <img src="{% static '/images/icon-youtube.png' %}" alt="logo">
+          <img src="{% static '/images/Frame.svg' %}" alt="logo">
+          <img src="{% static '/images/icon-instagram 1.svg' %}" alt="logo">
+        </div>
+      </div>
+      <div>
+        <p class="email-p">horlharmighty2000@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/landing.js' %}"></script>
+</body>
+</html>

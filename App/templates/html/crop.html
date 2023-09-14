@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Categories</title>
+  <link rel="stylesheet" href="{% static 'css/crop.css' %}">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="left-nav">
+        <div class="logo-cont"><img src="{% static 'images/image 2.svg' %}" alt="logo"></div>
+        <div class="logo-name">
+          <h2>Farmers Aid</h2>
+        </div>
+      </div>
+      
+      <div class="middle-nav" id="middle-nav">
+        <ul class="nav-options">
+          <li class="about" id="about"> <a href="{% url 'home' %}" class="about-link" style="text-decoration: none; color: #1d4025;">birds</a></li>
+          <li class="home" id="home">crops</li>
+          <li> <input class="search" type="search" placeholder="search for crops"></li>
+          <li class="about" id="about"> <a href="" class="about-link" style="text-decoration: none; color: #1d4025;">community</a></li>
+          <li class="about" id="about"> <a href="{% url 'market' %}"" class="about-link" style="text-decoration: none; color: #1d4025;">market</a></li>
+          <li class="about" id="about"> <a href="{% url 'cart' %}" class="about-link" style="text-decoration: none; color: #1d4025;">cart</a></li>
+          <li class="inner-logout"><a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;">logout</a> </li>
+        </ul>
+      </div>
+      
+      <div>
+        <a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;"><button class="btn">logout</button></a> 
+      </div>
+      
+      <img id="menu" src="{% static 'images/Group 7.svg' %}" alt="">
+      <img id="close" src="{% static 'images/Group 8.svg' %}" alt="">
+    </nav>
+  </header>
+
+  <main>
+    <div class="varieties">
+      <h2 class="birds-var">Crops Categories</h2>
+      <div class="categories-cont">
+        {% for categories in category %}
+        <a href="{% url 'cropvarieties' categories.id %}">
+        <div>
+          <div class="img-cont">
+            <img src="{{ categories.image.url}}" alt="">
+          </div>
+          <h3 class="name">{{categories.name}}</h3>
+          <p class="cat-cont">
+            {{categories.description}}
+          </p>
+        </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    
+  </main>
+  
+  <footer>
+    <div class="footer-div">
+      <div>
+        <div class="footer-logo">
+          <img src="{% static '/images/image 2.svg' %}" alt="logo">
+          <h2 class="site-name">farmers aid</h2>
+        </div>
+        <div class="social-media">
+          <img src="{% static '/images/icon-facebook.svg' %}" alt="logo">
+          <img src="{% static '/images/icon-twitter.svg' %}" alt="logo">
+          <img src="{% static '/images/icon-youtube.png' %}" alt="logo">
+          <img src="{% static '/images/Frame.svg' %}" alt="logo">
+          <img src="{% static '/images/icon-instagram 1.svg' %}" alt="logo">
+        </div>
+      </div>
+      <div>
+        <p class="email-p">horlharmighty2000@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>

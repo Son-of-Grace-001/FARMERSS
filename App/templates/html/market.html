@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>market</title>
+  <link rel="stylesheet" href="{% static 'css/market.css' %}">
+</head>
+<body>
+  
+  <header>
+    <nav>
+      <div class="left-nav">
+        <div class="logo-cont"><img src="{% static 'images/image 2.svg' %}" alt="logo"></div>
+        <div class="logo-name">
+          <h2>Farmers Aid</h2>
+        </div>
+      </div>
+
+      <div class="middle-nav" id="middle-nav">
+        <ul class="nav-options">
+          <li class="about" id="about"> <a href="{% url 'home' %}"" class="about-link" style="text-decoration: none; color: #1d4025;">birds</a></li>
+          <li class="about" id="about"> <a href="{% url 'crop' %}" class="about-link" style="text-decoration: none; color: #1d4025;">crops</a></li>
+          <li> <input class="search" type="search" placeholder="search for product"></li>
+          <li class="about" id="about"> <a href="" class="about-link" style="text-decoration: none; color: #1d4025;">community</a></li>
+          <li class="home" id="home">market</li>
+          <li class="about" id="about"> <a href="{% url 'cart' %}" class="about-link" style="text-decoration: none; color: #1d4025;">cart</a></li>
+          <li class="inner-logout"><a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;">logout</a> </li>
+        </ul>
+      </div>
+
+      <div>
+        <a href="{% url 'logout' %}" class="about-link" style="text-decoration: none; color: #1d4025;"><button class="btn">logout</button></a> 
+      </div>
+      
+      <img id="menu" src="{% static 'images/Group 7.svg' %}" alt="">
+      <img id="close" src="{% static 'images/Group 8.svg' %}" alt="">
+    </nav>
+  </header>
+
+  <main>
+    <div class="varieties">
+      <h2 class="birds-var">Products Categories</h2>
+      <div class="categories-cont">
+        {% for categories in category %}
+        <a href="{% url 'productvarieties' categories.id %}">
+          <div>
+            <div class="img-cont">
+              <img src="{{ categories.image.url }}" alt="">
+            </div>
+            <h4 class="name">{{ categories.name }}</h4>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+
+  <script src="{% static 'js/market.js' %}"></script>
+</body>
+</html>

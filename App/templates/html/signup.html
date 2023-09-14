@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>signup</title>
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+  <div class="login">
+    <div class="left-div">
+
+    </div>
+    <div class="right-div">
+      <div class="logo">
+        <img src="{% static '/images/image 2.svg' %}" alt=" logo">
+        <h2 class="logo-name">farmers aid</h2>
+      </div>
+      <h2 class="welcome">SIGN UP</h2>
+      <p class="login-p">Pls enter your details below</p>
+
+      <form id="form" method="post">
+
+        {% csrf_token %}
+
+        <label for="Firstname">Firstname</label> <br>
+        <input type="text" id="fname" class="username" name="firstname" placeholder="enter your firstname" >
+        <p class="ppp" id="required1">field cannot be empty</p>
+
+        <label for="Lastname">Lastname</label> <br>
+        <input type="text" id="lname" class="username" name="lastname" placeholder="enter your lastname" >
+        <p class="ppp" id="required2">field cannot be empty</p>
+
+        <label for="username">Username</label> <br>
+        <input id="username"  type="text" class="username" name="username" placeholder="enter your username" >
+        <p class="ppp" id="required3">field cannot be empty</p>
+        {% for messagee in messages %}
+        <p class=" messages">{{messagee}}</p>
+        {% endfor %}
+
+        <label for="username">Email</label> <br>
+        <input  type="email" id="mail" class="username" name="email" placeholder="enter your email" >
+        <p class="ppp" id="required4"> enter a valid email</p>
+        {% for message in messages %}
+        <p class=" messages">{{message}}</p>
+        {% endfor %}
+
+        <label for="password">Password</label> <br>
+        <input type="password" id="password" class="password" name="password" placeholder="enter your password">
+        <p class="ppp" id="required5">enter a strong password</p>
+
+        <label for="confirm">Confirm Password</label> <br>
+        <input type="password" id="cpassword" class="password" name="confirmp assword" placeholder="confirm your password">
+        <p class="ppp" id="required6">password doesnot match</p>
+        
+        <button id="btn" class="btn" type="submit">Signup</button>
+      </form>
+
+      <p class="donot">Already have an account yet ? Click <a class="here" href="{% url 'login' %}">here</a> to login</p>
+    </div>
+  </div>
+
+  <script src="{% static 'js/signup.js' %}"></script>
+</body>
+</html>

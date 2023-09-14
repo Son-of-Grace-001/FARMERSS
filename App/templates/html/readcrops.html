@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn more</title>
+  <link rel="stylesheet" href="{% static 'css/read.css' %}">
+</head>
+<body>
+  <main>
+    <div class="image-cont">
+      <img src="{{variety.image.url}}" alt="">
+    </div>
+
+    <div class="div">
+      <h2 class="name-h">{{variety.name}}</h2>
+    </div>
+
+    <h2  class="name-h">features</h2>
+    <div class="div">
+      <p class="description">{{variety.description}}</p>
+    </div>
+
+    <h2 class="name-h">weather</h2>
+    <div class="div">
+      <p class="description"> {{variety.weather}}</p>
+    </div>
+
+    <h2 class="name-h">yield</h2>
+    <div class="div">
+      <p class="description"> {{variety.yields}}</p>
+    </div>
+    
+    <h2 class="name-h">diseases</h2>
+    {% for disease in diseases %}
+    <div class="div">
+      <p style="font-size: bold;" class="description">{{ disease.name }}</p>
+      <p class="description">{{ disease.pest_description }}</p>
+    </div>
+
+      
+    {% endfor %}
+
+
+    <h2 class="name-h">control</h2>
+    <div class="div">
+      <p class="description"> heellool</p>
+    </div>
+  </main>
+</body>
+</html>

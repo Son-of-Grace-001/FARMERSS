@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+<body>
+  <header>
+   <nav>
+    <div class="left-nav">
+      <div class="logo-cont"><img src="{% static 'images/image 2.svg' %}" alt="logo"></div>
+      <div class="logo-name">
+        <h2>Farmers Aid</h2>
+      </div>
+    </div>
+
+    <div class="middle-nav" id="middle-nav">
+      <ul class="nav-options">
+        <li class="home" id="home"><a style="color: #1d4025; text-decoration: none;" href="{% url 'index' %}" >home</a> </li>
+        <li class="about" id="about">About us</li>
+        <li class="service" id="service"> <a style="color: #1d4025; text-decoration: none;" href="{% url 'service' %}" >service</a></li>
+        <li class="separate"><a style="text-decoration: none; color: #1d4025;" href="{% url 'login' %}">Login</a></li>
+        <li class="separate"><a style="text-decoration: none; color: #1d4025;" href="{% url 'signup' %}">Sign Up</a></li>
+      </ul>
+    </div>
+
+    <div class="right-nav">
+      <a href="{% url 'login' %}"><button class="login" id="login">Login</button></a>
+      <a href="{% url 'signup' %}"><button class="signup" id="signup">Sign Up</button></a>
+    </div>
+
+    <img id="menu" src="{% static 'images/Group 7.svg' %}" alt="">
+    <img id="close" src="{% static 'images/Group 8.svg' %}" alt="">
+   </nav>
+  </header>
+
+
+  <main>
+    <div class="top-main">
+
+    </div>
+
+    <div class="p-cont">
+      <p class="content-p">
+        The Crops and Birds Information Project is a resource for farmers and other agricultural professionals who want to learn more about crops and birds. 
+        The project provides information on a variety of topics, including crop and bird identification, growing conditions, pests and diseases, harvesting and storage, and uses. 
+        The project also includes information on the interactions between crops and birds, such as how birds can help to pollinate crops, control pests, and damage crops.
+        The project is designed to be a comprehensive and user-friendly resource for farmers and other agricultural professionals. The information is presented in a clear and concise
+        way, and the project includes a variety of features to help users find the information they need, such as a search function, a glossary of terms, and links to other resources.
+        The Crops and Birds Information Project is a valuable resource for farmers and other agricultural professionals who want to learn more about crops and birds.
+        The project provides accurate and up-to-date information that can help farmers to make informed decisions about their crops and birds, and to improve their yields and profits. <br>
+        <br>
+        <b>Benefits</b> <br>
+        The Crops and Birds Information Project offers a number of benefits to farmers and other agricultural professionals, including: <br>
+        Access to accurate and up-to-date information on crops and birds. <br>
+        The ability to learn more about the interactions between crops and bird. <br>
+        The ability to make informed decisions about their crops and birds. <br>
+        The ability to improve their yields and profits. <br>
+        <br>
+        <b>How to use</b> <br>
+        The Crops and Birds Information Project is easy to use. Simply visit the website and enter the name of the crop or bird you are interested in. The project will then provide you with information on that crop or bird, including its identification, growing conditions, pests and diseases, harvesting and storage, and uses.
+        The project also includes a number of other features to help you find the information you need, such as: <br>
+        A search function <br>
+        A glossary of terms <br>
+        Links to other resources <br>
+        <br>
+        Contact us <br>
+        If you have any questions about the Crops and Birds Information Project, We would be happy to help you.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-div">
+      <div>
+        <div class="footer-logo">
+          <img src="{% static 'images/image 2.svg' %}" alt="logo">
+          <h2 class="site-name">farmers aid</h2>
+        </div>
+        <div class="social-media">
+          <img src="{% static 'images/icon-facebook.svg' %}" alt="logo">
+          <img src="{% static 'images/icon-twitter.svg' %}" alt="logo">
+          <img src="{% static 'images/icon-youtube.png' %}" alt="logo">
+          <img src="{% static 'images/Frame.svg' %}" alt="logo">
+          <img src="{% static 'images/icon-instagram 1.svg' %}" alt="logo">
+        </div>
+      </div>
+      <div>
+        <p class="email-p">horlharmighty2000@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/landing.js' %}"></script>
+</body>
+
+</html>

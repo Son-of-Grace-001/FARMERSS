@@ -1,0 +1,399 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+/*styling the nav bar*/
+header{
+  height: 100px;
+  width: 100%;
+  position: fixed; 
+  margin-top: -100px;
+  background-color: #ffffff;
+}
+
+nav{
+  height: 100%;
+  width: 100%;
+  padding: 20px 100px 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-nav{
+  display: flex;
+  align-items: center;
+}
+
+.logo-name >h2{
+  text-transform: uppercase;
+  color: #1D4025;
+}
+
+.nav-options{
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-options >li{
+  margin-right: 50px;
+  color: #1D4025;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.nav-options >li:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.home{
+  font-weight: bold;
+}
+.login,.signup{
+  width: 120px;
+  height: 40px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+.login{
+  border: 1px solid #1D4025;
+  background-color: #ffffff;
+  color: #1D4025;
+  margin-right: 10px;
+}
+.signup{
+  background-color: #1D4025;
+  color: #ffffff;
+  border: none;
+}
+.about-btn, .service-btn, .separate{
+  text-decoration: none;
+}
+
+.separate{
+  display: none;
+}
+
+/*styling the top-main*/
+.top-main{
+  background-image: url(../images/image\ 1.png);
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: cover;
+  margin-top: 100px;
+}
+
+.why,.did,.about-div,.service-div{
+  padding: 50px 100px 50px 100px;
+  border-bottom: 1px solid #1D4025;
+}
+.why-header, .did-header, .aboutus-h, .service-h, .why-header-2{
+  color: #1D4025;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.why-header-2{
+  margin-top: 20px;
+}
+.why-content,.aboutus-p,.service-p{
+  font-size: 20px;
+  color: #767A77;
+}
+.maize{
+  color:#1D4025;
+  margin-top: 8px;
+}
+a{
+  text-decoration:none;
+}
+.size,.price{
+  color:#767A77;
+  margin-bottom: 8px;
+}
+.price{
+  font-weight:bold;
+}
+.add{
+  color:#ffffff;
+  background-color: #1D4025;
+  width:100%;
+  height:40px;
+  border:none;
+  border-radius:8px;
+  text-align:center;
+}
+.add:hover{
+  cursor:pointer;
+  opacity:0.8;
+}
+.login:hover{
+  cursor:pointer;
+  opacity:0.8;
+}
+.signup:hover{
+  cursor:pointer;
+  opacity:0.8;
+}
+.read-more:hover{
+  background-color: #1D4025;
+  color:#ffffff;
+  opacity:0.3;
+  cursor:pointer;
+}
+.read-more:active{
+  background-color: #1D4025;
+  color:#ffffff;
+}
+/*styling the did cont*/
+.inner-did-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+.img-cont{
+  height: 250px;
+  width: 100%;
+}
+.img-cont >img{
+  width: 100%;
+  height: 100%;
+}
+.cont-h{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #1D4025;
+  text-align: center;
+}
+.cont-p{
+  font-size: 20px;
+  color: #767A77;
+}
+
+/*styling the about*/
+.read-more{
+  width:120px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #1d4025;
+  border: 1px solid #1d4025;
+  text-align: center;
+  margin-top:30px;
+  border-radius: 10px;
+}
+
+/*styling the footer div*/
+.footer-div{
+  background-color: #1D4025;
+  padding: 50px 100px 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.email-p{
+  color: #ffffff;
+  font-size: 20px;
+}
+.footer-logo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.footer-logo >img{
+  height: 32px;
+  width: 32px;
+  margin-right: 8px;
+}
+.footer-logo >h2{
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.social-media >img{
+  margin-right:18px;
+}
+.about-link,
+.service-link{
+  text-decoration: none;
+  color: #1D4025;
+}
+#menu,
+#close{
+  display: none;
+}
+
+@media only screen and (max-width:1024px) and (min-width:769px) {
+  nav{
+    padding: 60px;
+  }
+  .nav-options >li{
+    margin-right: 30px;
+  }
+  .nav-options{
+    display: block;
+  }
+  .nav-options >li{
+    margin-bottom: 30px;
+  }
+  .separate{
+    display: block;
+  } 
+  .separate >a{
+    text-decoration: none;
+    color: #1D4025;
+  }
+  .middle-nav{
+    width: 90%;
+    background-color: #ffffff;
+    position: absolute;
+    text-align: center;
+    top: 110%;
+    padding-left: 40px;
+    padding-top: 30px;
+    margin: auto;
+    display: none;
+  }
+  .why,.did,.about-div,.service-div{
+    padding: 60px;
+    border-bottom: 1px solid #1D4025;
+  }
+  .inner-did-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .footer-div{
+    gap: 60px;
+  }
+  .right-nav{
+    display: none;
+  }
+  #menu{
+    display: block;
+  }
+  
+}
+
+@media only screen and (max-width:768px) and (min-width:600px) {
+  nav{
+    padding: 40px;
+  }
+  .nav-options >li{
+    margin-right: 30px;
+  }
+  .nav-options{
+    display: block;
+  }
+  .nav-options >li{
+    margin-bottom: 20px;
+  }
+  .separate{
+    display: block;
+  } 
+  .separate >a{
+    text-decoration: none;
+    color: #1D4025;
+  }
+  .middle-nav{
+    width: 90%;
+    background-color: #ffffff;
+    position: absolute;
+    text-align: center;
+    top: 110%;
+    padding-left: 40px;
+    padding-top: 30px;
+    margin: auto;
+    display: none;
+  }
+  .why,.did,.about-div,.service-div{
+    padding: 40px;
+    border-bottom: 1px solid #1D4025;
+  }
+  .inner-did-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .footer-div{
+    gap: 40px;
+  }
+  .right-nav{
+    display: none;
+  }
+  #menu{
+    display: block;
+  }
+  
+}
+
+@media screen and (max-width: 600px){
+
+  body{
+    object-fit: fill;
+  }
+
+  nav{
+    padding: 20px;
+  }
+  .middle-nav{
+    width: 90%;
+    background-color: #ffffff;
+    position: absolute;
+    text-align: center;
+    top: 110%;
+    padding-left: 40px;
+    padding-top: 30px;
+    margin: auto;
+    display: none;
+  }
+  .nav-options{
+    display: block;
+  }
+  .nav-options >li{
+    margin-bottom: 15px;
+  }
+  .separate{
+    display: block;
+  } 
+  .separate >a{
+    text-decoration: none;
+    color: #1D4025;
+  } 
+  .top-main{
+    background-image: url(../images/image\ 1.png);
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: cover;
+    margin-top: 100px;
+  }
+  .why,.did,.about-div,.service-div{
+    padding: 20px;
+    border-bottom: 1px solid #1D4025;
+  }
+  .inner-did-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .img-cont{
+    width: 100%;
+  }
+  .footer-div{
+    padding:20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .right-nav{
+    display: none;
+  }
+  #menu{
+    display: block;
+  }
+  
+}
